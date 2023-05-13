@@ -1,5 +1,14 @@
 {
   "manifest_version": 3,
   "name": "Id Card Reader",
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "externally_connectable": {
+    "matches": [
+      "https://localhost:5173/*",
+      "https://127.0.0.1:5173/*"
+    ]
+  }
 }
